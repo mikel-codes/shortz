@@ -3,7 +3,7 @@ Click underline to view shortlink
 
 <% @links.each do |link| %>
   <ul>
-    <li><%= link_to link.slug %> - <%= link.url %></li>
+    <li><%= link_to link.slug, link.url %> - <%= link.url %></li>
     <li>ShortLInk: <%= link.short %></li>
   </ul>
 <% end %>
