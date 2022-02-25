@@ -13,6 +13,8 @@ development:
   <<: *default
   username: topman
   password: top1343
+  host: localhost
+  port: 5432
   database: shorts_development
 
 # Warning: The database defined as "test" will be erased and
@@ -23,6 +25,8 @@ test:
   database: shorts_test
   username: topman
   password: top1343
+  host: localhost
+  port: 5432
 
 production:
   <<: *default
