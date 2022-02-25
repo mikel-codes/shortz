@@ -4,7 +4,7 @@ Click underline to view shortlink
 <% @links.each do |link| %>
   <ul>
     <li><%= link_to link.slug, link.url %> - <%= link.url %></li>
-    <li>ShortLInk: <%= link.short %></li>
+    <li>ShortLInk: <%= short_url :slug => link.slug %></li>
   </ul>
 <% end %>
 <%= link_to 'Create another link', new_link_path %>
