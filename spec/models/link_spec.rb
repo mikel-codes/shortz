@@ -1,5 +1,5 @@
 require 'rails_helper'
-
+require 'byebug'
 RSpec.describe Link, type: :model do
   it "is valid it has a url and a slug field" do
     link = Link.new(url: "https://www.westsideplugs.com/welcome-to-an-original-container",
@@ -10,6 +10,12 @@ RSpec.describe Link, type: :model do
   it "is invalid it it does not contain a url" do
     link =  Link.new(url: "", slug: "World")
     expect(link.valid?).not_to be true
+  end
+
+  it "autogenerates a slug if none is given" do
+    link= FactoryBot.create(:link)
+    expect(link.valid?).to be true
+    expect(link.slug).not_to be nil
   end
 
   it "is invalid if the slug has already been used" do
