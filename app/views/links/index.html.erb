@@ -1,0 +1,10 @@
+<h1> All Links</h1>
+Click underline to view shortlink
+
+<% @links.each do |link| %>
+  <ul>
+    <li><%= link_to link.slug %> - <%= link.url %></li>
+    <li>ShortLInk: <%= link.short %></li>
+  </ul>
+<% end %>
+<%= link_to 'Create another link', new_link_path %>

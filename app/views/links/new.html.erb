@@ -1,0 +1,13 @@
+<p>Lets Shorten You Url</p>
+<% if not flash[:error].nil? %>
+<%flash[:error].each do |n| %>
+<p>
+ <%= n %></p>
+<% end %>
+<% end %>
+
+<%= form_with model: @link do |form| %>
+  <p>Please input url you want to shorten: <%= form.text_field :url %></p>
+  <p>Optional <%=form.text_field :slug %></p>
+  <%= form.submit %>
+<% end %>
