@@ -14,7 +14,7 @@ class Link < ApplicationRecord
     true
   end
 
-  # load a faster connect connect to shortenedlink
+  # helps to load a faster a shortlink quicker
   def short
     Rails.application.routes.url_helpers.short_url(slug: self.slug)
   end
