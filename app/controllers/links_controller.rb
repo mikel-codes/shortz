@@ -9,7 +9,6 @@ class LinksController < ApplicationController
 
   def create
     @link = Link.new(link_params)
-    #@link.long_link = @link.sanitize
     if @link.save
       redirect_to links_path
     else
@@ -20,12 +19,12 @@ class LinksController < ApplicationController
   end
 
   def show
-    #@link = Link.find_by(short_link: params[:short_link])
-    #redirect_to @link.sanitize
     @link = Link.find_by_slug(params[:slug])
-    render 'errors/404', status: 404 if @link.nil?
-    #@link.update_attribute(:clicked, @link.clicked + 1)
-    redirect_to @link.url
+    if @link.nil?
+      render 'errors/404', status: 404
+    else
+      redirect_to @link.url
+    end
   end
 
   private
