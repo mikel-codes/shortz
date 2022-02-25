@@ -8,6 +8,6 @@
 
 <%= form_with model: @link do |form| %>
   <p>Please input url you want to shorten: <%= form.text_field :url %></p>
-  <p>Optional <%=form.text_field :slug %></p>
+  <p>Optional Shortening Code: <%=form.text_field :slug %></p>
   <%= form.submit %>
 <% end %>
