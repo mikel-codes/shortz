@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :link do
-    url { "MyString" }
-    slug { "MyString" }
+    url { Faker::Internet.url  }
+    slug { "" }
   end
 end
