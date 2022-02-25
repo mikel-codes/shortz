@@ -5,20 +5,10 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version 2.7.4
 
-* System dependencies
+* Postgresql Database
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
+This is a RoR that helps to shorten urls passed to it. It uses an optional code to create a unique shortener for the input urls and auto generates one when none is given.
 
 * ...
