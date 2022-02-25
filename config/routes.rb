@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  default_url_options :host => "example.com"
+  default_url_options :host => "shortz2022.herokuapp.com"
 
   get '/s/:slug', to: 'links#show', as: :short
   resources :links, only: [:index, :create, :new]
